@@ -1267,357 +1267,187 @@ section,
   color: var(--accent-color);
 }
 
-.test-box{
-  padding-top: 20px;
+.video-container{
+  position: relative;
+  width: 1620px;
+  height: 1000px;
 }
 
-.video-container {
-  position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 설정 */
-  width: 1620px; /* 동영상 너비 */
-  height: 1000px; /* 동영상 높이 */
-  margin: auto; /* 중앙 정렬 */
+.video-container video{
+  width: 100%;
+  height: auto;
 }
 
-video {
-  width: 100%; /* 동영상 너비를 부모 요소에 맞춤 */
-  height: 100%; /* 동영상 높이를 부모 요소에 맞춤 */
-}
-
-.overlay-text {
-  position: absolute; /* 동영상 위에 겹치도록 설정 */
-  top: 10%; /* 수직 중앙 */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  color: rgb(0, 0, 0); /* 글씨 색상 */
-  font-size: 18px; /* 글씨 크기 */
+.menu-bar{
+  position: absolute;
+  top: 1.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1550px;
+  height: 72px;
+  background-color: rgba(206, 206, 206, 0.8);
+  border-radius: 8px;
+  color: #000000;
   font-weight: bold;
-  text-align: center; /* 글씨 중앙 정렬 */
-  background-color: rgb(212, 207, 207);  /* 불투명 배경 */
-  padding: 15px 20px; /* 패딩 조정 */
-  border-radius: 10px; /* 모서리 둥글게 조정 */
-  width: 1518px; /* 박스 너비 조정 */
-  height: 72px; /* 박스 높이 조정 */
+  cursor: pointer;
 }
 
-.overlay-text2{
-  position: absolute; /* 동영상 위에 겹치도록 설정 */
-  top: 50%; /* 수직 위치 조정 */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  color: rgb(255, 255, 255); /* 글씨 색상 변경 (원하는 색상으로 변경) */
-  font-size: 45px; /* 글씨 크기 */
-  text-align: center; /* 글씨 중앙 정렬 */
-  z-index: 10; /* 다른 요소보다 위에 표시 */
+.menu-bar ul:not(.dropdown-menu){
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  width: 1000px;
+  height: 60px;
+  padding: 0;
+  margin: 6px;
+}
+
+.menu-bar ul li:not(.start-bar){
+  text-align: center;
+  border-radius: 8px;
+  width: 120px;
+  height: 45px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-bar ul li .bold {
+  font-size:18px;
+  margin-top: 18px;
+}
+
+.menu-bar ul li:not(.start-bar, .logo):hover{
+  background-color: rgba(151, 151, 151, 0.7);
+}
+
+.menu-bar, .side-menu{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sign-menu{
+  display: flex;
+  margin-left: 60%;
+  margin-right: 10px;
+}
+
+.play-game {
+  width: 150px;
+  height: 50px;
+  display: flex; /* Flexbox 활성화 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  background-color: #fc7013;
+  border-radius: 8px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.play-game:hover{
+  width: 150px;
+  height: 50px;
+  background-color: rgba(252, 118, 28, 0.8);
+}
+
+.main-logo{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-introduce{
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-introduce h1{
   font-style: italic;
   font-weight: bold;
+  color: #ffffff;
+  
 }
 
-.overlay-text3{
-  position: absolute;
-  top: 55%; /* 수직 위치 조정 */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  color: rgb(255, 255, 255); /* 글씨 색상 변경 (원하는 색상으로 변경) */
-  font-size: 20px; /* 글씨 크기 */
+.main-introduce p{
   font-weight: bold;
-  text-align: center; /* 글씨 중앙 정렬 */
-  z-index: 10; /* 다른 요소보다 위에 표시 */
+  color: #ffffff;
+  font-size: 20px;
 }
 
-.overlay-image {
-  position: absolute; /* 동영상 위에 겹치도록 설정 */
-  top: 40%; /* 수직 위치 조정 (원하는 위치로 변경 가능) */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  width: 600px; /* 이미지 너비 조정 (필요에 따라 변경) */
-  height: auto; /* 비율 유지 */
-  z-index: 10; /* 다른 요소보다 위에 표시 */
-}
-
-.one {
-  margin-left: 50px;
-  margin-right: 20px;
-  display: flex; /* 플렉스 박스 사용 */
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  width: 100px;
-  position: relative;
-}
-
-.one-text li a{
-  display: block; /* 링크를 블록으로 만들어 전체 영역 클릭 가능 */
-}
-
-.one:hover {
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-
-}
-
-.two{
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 100px;
-}
-
-.two:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-}
-
-
-.three{
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100px;
-}
-
-.three:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-}
-
-.four{
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100px;
-}
-
-.four:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-}
-
-.five{
-  margin-left: 20px;
-  margin-right: 20px;
-  display: flex; /* 플렉스 박스 사용 */
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  width: 120px;
-  text-align: left;
-  position: relative;
-}
-
-.five:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 120px;
-  height: 50px;
-  position: relative;
-}
-
-.six{
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 120px;
-    text-align: left;
-    position: relative;
-}
-
-.six:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-}
-
-.box{
-  padding-left: 400px;
-}
-
-.seven {
-  width: 50px;
-  text-align: right; /* 오른쪽 정렬 */
-
-  display: inline-block; /* 인라인 블록으로 설정 */
-  font-size:15px
-}
-
-.seven:hover{
-  background-color: rgba(185, 183, 183, 0.7);
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-}
-
-.eight {
-  padding-right: 20px;
-  text-align: right; /* 오른쪽 정렬 */
-  display: inline-block; /* 인라인 블록으로 설정 */
-}
-
-.boxed-text {
-  margin-left:30px;
-  display: inline-block; /* 블록처럼 동작하게 하여 패딩과 배경이 적용되도록 함 */
-  background-color: rgb(255, 115, 0); /* 불투명 배경 */
-  padding: 10px 20px 10px 20px; /* 내부 여백 */
-  border-radius: 8px; /* 모서리 둥글게 */
-}
-
-.small-text {
-  font-size: 16px; /* 원하는 크기로 텍스트 크기 조정 */
-  color: rgb(255, 255, 255); /* 텍스트 색상 */
-}
-
-.boxed-text2 {
-  position: absolute;
-  top: 65%; /* 수직 위치 조정 (원하는 위치로 변경 가능) */
-  left: 50%; /* 수평 중앙 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  display: flex; /* 플렉스 박스 사용 */
-  justify-content: center; /* 수평 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  background-color: rgb(255, 115, 0); /* 불투명 배경 */
-  padding: 10px 20px; /* 내부 여백 */
+.start-button{
+  position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%);
   width: 196px;
   height: 72px;
+  background-color: rgba(252, 118, 28, 0.8);
+  border: none;
 }
 
-.small-text2 {
-  font-size: 23px; /* 원하는 크기로 텍스트 크기 조정 */
-  color: rgb(255, 255, 255); /* 텍스트 색상 */
-  font-weight: bold;
-}
-
-.dropdown-menu {
-  display: none; /* 기본적으로 숨김 */
-  position: absolute; /* 절대 위치 */
-  top: 100%; /* 게임정보 아래에 위치 */
-  left: 50%; /* 중앙 정렬을 위한 왼쪽 위치 */
-  transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
-  background-color: white; /* 배경색 */
-  border: 1px solid #ccc; /* 테두리 */
-  border-radius: 10px; /* 모서리 둥글게 */
-  z-index: 10; /* 다른 요소 위에 표시 */
-}
-
-.one:hover .dropdown-menu {
-  display: block; /* 호버 시 표시 */
-}
-
-.dropdown-menu ul {
-  list-style-type: none; /* 리스트 스타일 제거 */
-  padding: 10px; /* 내부 여백 */
-  margin: 0; /* 마진 제거 */
-}
-
-.dropdown-menu li {
-  padding: 5px 10px; /* 항목 패딩 */
-}
-
-.dropdown-menu li:hover {
-  background-color: rgba(182, 181, 179, 0.5); /* 호버 시 배경색 변경 */
-}
-
-.one-text {
-  font-size: 15px; /* 원하는 글씨 크기로 설정 (예: 14px) */
-  color: black; /* 글씨 색상 설정 (원하는 색상으로 변경 가능) */
-  padding: 0; /* 패딩 제거 (필요 시 조정) */
-  margin: 0; /* 마진 제거 (필요 시 조정) */
-}
-
-.one-text li {
-  padding: 5px 10px; /* 리스트 항목의 패딩 설정 */
-}
-
-.dropdown-menu2 {
-  display: none; /* 기본적으로 숨김 */
-  position: absolute; /* 절대 위치 */
+.start-button:hover{
   width: 200px;
-  top: 100%; /* 게임정보 아래에 위치 */
-  left: 50%; /* 중앙 정렬을 위한 왼쪽 위치 */
+  height: 72px;
+  background-color: rgba(250, 108, 13, 1);
+  border: none;
+}
+
+.start-button p{
+  font-weight: bold;
+  color: #fff;
+  line-height: 72px;
+  font-size: 23px;
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-menu {
+  display: none; /* 기본적으로 드롭다운 메뉴 숨김 */
+  position: absolute; /* 드롭다운 메뉴 위치 설정 */
+  top: 100%; /* 부모 요소 아래에 위치 */
+  left: 50%; /* 부모 요소의 중앙에 위치 */
   transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
-  background-color: white; /* 배경색 */
-  border: 1px solid #ccc; /* 테두리 */
-  border-radius: 10px; /* 모서리 둥글게 */
-  z-index: 10; /* 다른 요소 위에 표시 */
+  background-color: white; /* 드롭다운 배경색 */
+  border: 1px solid #ccc; /* 테두리 추가 */
+  z-index: 1000; /* 다른 요소 위에 표시 */
+  width: 220px;
+} 
+
+.dropdown-item {
+  padding: 12px 16px; /* 드롭다운 항목의 패딩 조정 */
+  cursor: pointer; /* 마우스 포인터 변경 */
+  margin-left: 10px;
 }
 
-.five:hover .dropdown-menu2 {
-  display: block; /* 호버 시 표시 */
+.dropdown-item:hover {
+  background-color: rgba(226, 226, 226, 0.7);
+  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
 }
 
-.dropdown-menu2 ul {
-  list-style-type: none; /* 리스트 스타일 제거 */
-  padding: 10px; /* 내부 여백 */
-  margin: 0; /* 마진 제거 */
+.dropdown:hover .dropdown-menu {
+  display: block; /* 호버 시 드롭다운 메뉴 표시 */
 }
 
-.dropdown-menu2 li {
-  padding: 5px 10px; /* 항목 패딩 */
+a:not(.overwatch) {
+  color: inherit; /* 부모 요소의 색상 상속 */
+  text-decoration: none; /* 밑줄 제거 (선택 사항) */
 }
 
-.dropdown-menu2 li:hover {
-  background-color: rgba(182, 181, 179, 0.5); /* 호버 시 배경색 변경 */
+a:hover {
+  color: inherit; /* 호버 시 색상 변경 방지 */
+  text-decoration: none; /* 호버 시 밑줄 제거 (선택 사항) */
 }
 
-.five-text {
-  font-size: 15px; /* 원하는 글씨 크기로 설정 (예: 14px) */
-  color: black; /* 글씨 색상 설정 (원하는 색상으로 변경 가능) */
-  padding: 0; /* 패딩 제거 (필요 시 조정) */
-  margin: 0; /* 마진 제거 (필요 시 조정) */
-}
-
-.five-text li {
-  padding: 5px 10px; /* 리스트 항목의 패딩 설정 */
-}
-
-.dropdown-menu3 {
-  display: none; /* 기본적으로 숨김 */
-  position: absolute; /* 절대 위치 */
-  width: 150px;
-  top: 100%; /* 게임정보 아래에 위치 */
-  left: 50%; /* 중앙 정렬을 위한 왼쪽 위치 */
-  transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
-  background-color: white; /* 배경색 */
-  border: 1px solid #ccc; /* 테두리 */
-  border-radius: 10px; /* 모서리 둥글게 */
-  z-index: 10; /* 다른 요소 위에 표시 */
-}
-
-.six:hover .dropdown-menu3 {
-  display: block; /* 호버 시 표시 */
-}
-
-.dropdown-menu3 ul {
-  list-style-type: none; /* 리스트 스타일 제거 */
-  padding: 10px; /* 내부 여백 */
-  margin: 0; /* 마진 제거 */
-}
-
-.dropdown-menu3 li {
-  padding: 5px 10px; /* 항목 패딩 */
-}
-
-.dropdown-menu3 li:hover {
-  background-color: rgba(182, 181, 179, 0.5); /* 호버 시 배경색 변경 */
-}
-
-.six-text {
-  font-size: 15px; /* 원하는 글씨 크기로 설정 (예: 14px) */
-  color: black; /* 글씨 색상 설정 (원하는 색상으로 변경 가능) */
-  padding: 0; /* 패딩 제거 (필요 시 조정) */
-  margin: 0; /* 마진 제거 (필요 시 조정) */
-}
-
-.six-text li {
-  padding: 5px 10px; /* 리스트 항목의 패딩 설정 */
-}
-
-.button{
-  color: rgb(0, 0, 0); /* 기본 색상 */
-  text-decoration: none; /* 밑줄 제거 */
-}
-
-.button:hover {
-  color: rgb(0, 0, 0); /* 호버 시 색상 변경 */
+.warning{
+  color: red;
+  font-weight: bold;
 }
